@@ -1,0 +1,53 @@
+.section-register {
+    background-color: $color-light-gray;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+    @include responsive (phone-screen) {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.section-register__left {
+    flex-basis: 60%;
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include responsive (tab-portrait-screen) {
+        padding-right: 2rem;
+    }
+
+    @include responsive (phone-screen) {
+        align-items: center;
+        flex-basis: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.section-register__right {
+    flex-basis: 40%;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive (tab-portrait-screen) {
+        padding: 2rem;
+    }
+}
+
+.section-register__text-box {
+    width: 40rem;
+}
+
+.register {
+    @include responsive (phone-screen) {
+        width: 60%;
+    }
+}

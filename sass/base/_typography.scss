@@ -1,0 +1,56 @@
+body {
+    font-family: "Lato" sans-serif;
+    line-height: 1.7;
+    color: $color-dark;
+}
+
+.heading-primary {
+    font-size: 3.8rem;
+
+    @include responsive (tab-portrait-screen) {
+        line-height: 3.4rem;
+    }
+
+    @include responsive (phone-screen) {
+        text-align: center;
+    }
+}
+
+.text-primary {
+    font-size: 1.7rem;
+
+    @include responsive (phone-screen) {
+        text-align: center;
+    }
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    color: $color-white;
+    text-align: center;
+}
+
+.text-secondary {
+    font-size: 1.6rem;
+    color: $color-white;
+}
+
+.text-primary--sx-2 {
+    font-size: 1.5rem;
+    color: $color-gray-dark-1;
+}
+
+.text-primary--sx-1 {
+    font-size: 1.6rem;
+}
+
+.text-primary--bold {
+    font-weight: 800;
+    color: $color-primary-text;
+}
+
+.error-text {
+    color: $color-red-1;
+    font-size: 1.5rem;
+    display: none;
+}

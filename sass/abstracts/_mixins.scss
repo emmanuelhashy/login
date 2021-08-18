@@ -1,0 +1,25 @@
+//MEDIA QUERY
+
+//1em = 16px
+
+@mixin responsive ($breakpoint) {
+    @if $breakpoint == phone-screen {
+        @media (max-width: 37.5em) {@content}; //600px/16px
+    }
+
+    @if $breakpoint == i-pad-screen {
+        @media (max-width: 41.9em) {@content}; //670px/16px
+    }
+
+    @if $breakpoint == tab-portrait-screen {
+        @media (max-width: 56.25em) {@content}; // 900px/16px
+    }
+
+    @if $breakpoint == tab-landscape-screen {
+        @media (max-width: 75em) {@content}; // 1200px/16px
+    }
+
+    @if $breakpoint == big-desktop -screen {
+        @media (min-width: 112.5em) {@content}; // 1800px/16px
+    }
+}

@@ -1,0 +1,67 @@
+.form {
+    width: 60%;
+    min-width: 30rem;
+
+    @include responsive (phone-screen) {
+        min-width: 100%;
+        margin-right: 0rem;
+    }
+
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__group {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    font-size: 1.4rem;
+  }
+
+  &__label {
+    position: absolute;
+    left: 20px;
+    top: -10px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: $color-light-gray-1;
+    background-color: $color-light-gray;
+    padding: 0rem 1rem;
+    transform: all .5s;
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 3px;
+    border: 1px solid $color-light-gray-1;
+    background-color: $color-light-gray;
+    display: block;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+      color: $color-gray-dark-1;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1.6pt solid $color-light-gray-1;
+      border-radius: 3px;
+    }
+
+    &:focus:invalid {
+        border: 1.6pt solid $color-red-1;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+      opacity: 0;
+      visibility: hidden;
+  }
+}

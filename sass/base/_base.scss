@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+    
+    @include responsive (tab-landscape-screen) {
+        font-size: 56.25%;  //1rem = 9px; 9px/16px = 56.25%
+    }
+    
+    @include responsive (tab-portrait-screen) {
+        font-size: 50%; //1rem = 8px; 8px/16px = 50% 
+    }
+
+    @include responsive (big-desktop-screen) {
+        font-size: 75%;  //1rem = 12px; 12px/16px = 56.25%
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
